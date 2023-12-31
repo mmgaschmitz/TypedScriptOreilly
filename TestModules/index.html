@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Basic JavaScript module example</title>
+    <style>
+      canvas {
+        border: 1px solid black;
+        background-color: red;
+      }
+    </style>
+    <h1>Basic JavaScript module example</h1>
+    <div></div>
+    <script type="importmap">
+      {
+        "imports": {
+          "canvas": "./modules/canvas2.js"
+        }
+      }
+    </script>
+    <script type="module" src="main.js"></script>
+  </head>
+  <body></body>
+</html>
