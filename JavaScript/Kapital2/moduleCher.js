@@ -5,3 +5,4 @@ exports.cher = {
     firstname: "maurice",
     lastname: "schmitz",
 };
+//# sourceMappingURL=moduleCher.js.map

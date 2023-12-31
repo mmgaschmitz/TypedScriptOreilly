@@ -29,3 +29,4 @@ const moduleCher_1 = require("./moduleCher");
 moduleCher_1.cher.firstname = "mauricechanged";
 moduleCher_1.cher.lastname = "schmitzchanged";
 console.log(moduleCher_1.cher.firstname, moduleCher_1.cher.lastname);
+//# sourceMappingURL=index.js.map

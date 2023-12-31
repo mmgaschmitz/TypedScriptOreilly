@@ -1,3 +1,4 @@
+console.log("============================================");
 console.log("Example type union 1");
 let mathematician = Math.random() > 0.5 ? undefined : "Mark Goldberg";
 console.log(mathematician, typeof mathematician);
@@ -16,6 +17,7 @@ if (Math.random() > 0.5) {
 }
 console.log(thinker, typeof thinker);
 
+console.log("============================================");
 console.log("Example type union 2");
 let physicist = Math.random() > 0.5 ? "Maurice " : 84;
 physicist.toString();
@@ -27,6 +29,7 @@ if (typeof physicist === "string") {
 
 console.log(physicist, typeof physicist);
 
+console.log("============================================");
 console.log("Example type narrowering");
 let admiral: number | string;
 
@@ -36,6 +39,7 @@ admiral = "Hello";
 admiral.toUpperCase();
 //admiral.toFixed();
 
+console.log("============================================");
 console.log("Example == verus ===");
 
 let mybool: boolean = false;
@@ -63,6 +67,7 @@ console.log(mynumber, "== 10", mynumber == 10);
 console.log(mynumber, "=== 343", mynumber === 343);
 console.log(mynumber, "== 343", mynumber == 343);
 
+console.log("============================================");
 console.log("Error voor typed script maar niet fout voor javascript");
 /* 
 
@@ -73,8 +78,8 @@ the strict equality operator always considers operands of different types to be 
 console.log(
   mynumber,
   "=== ",
-  mystringSamenUmber,
-  mynumber === mystringSamenUmber
+  mystringSamenUmber
+  // mynumber === mystringSamenUmber
 );
 
 /*
@@ -85,10 +90,11 @@ it attempts to convert and compare operands that are of different types.
 console.log(
   mynumber,
   "== ",
-  mystringSamenUmber,
-  mynumber == mystringSamenUmber
+  mystringSamenUmber
+  // mynumber == mystringSamenUmber
 );
 
+console.log("============================================");
 /*
 null
 */
@@ -109,9 +115,63 @@ console.log(myvar, typeof myvar, myvar === undefined, myvar === null);
 myvar = null;
 console.log(myvar, typeof myvar, myvar === undefined, myvar === null);
 
+console.log("============================================");
 console.log("Literal const");
-const philosopher = "Hypatia";
+// const philosopher = "Hypatia";
 const aNumber = 12;
 
 console.log(philosopher, typeof philosopher);
 console.log(aNumber, typeof aNumber);
+
+console.log("============================================");
+console.log("Typeof results is always a string");
+
+let typeNum = typeof 123;
+let typeString = typeof "Maurice";
+let typeBool = typeof true;
+
+console.log(typeNum, typeof typeNum, typeNum === "number");
+console.log(typeString, typeof typeString, typeString === "string");
+console.log(typeBool, typeof typeBool, typeBool === "boolean");
+
+console.log("============================================");
+console.log("number types");
+let asecondNumber: number;
+let abigintNumber: bigint;
+asecondNumber = 10;
+console.log(asecondNumber, typeof asecondNumber);
+
+asecondNumber = 10.347;
+console.log(asecondNumber, typeof asecondNumber);
+
+asecondNumber = 12345678901.987654321;
+console.log(asecondNumber, typeof asecondNumber);
+asecondNumber = 123456789012.987654321;
+console.log(asecondNumber, typeof asecondNumber);
+asecondNumber = 1234567890123.987654321;
+console.log(asecondNumber, typeof asecondNumber);
+asecondNumber = 12345678901234.987654321;
+console.log(asecondNumber, typeof asecondNumber);
+asecondNumber = 123456789012345.987654321;
+console.log(asecondNumber, typeof asecondNumber);
+asecondNumber = 1234567890123456.987654321;
+console.log(asecondNumber, typeof asecondNumber);
+asecondNumber = 12345678901234567.987654321;
+console.log(asecondNumber, typeof asecondNumber);
+asecondNumber = 123456789012345678.987654321;
+console.log(asecondNumber, typeof asecondNumber);
+asecondNumber = 1234567890123456789.987654321;
+console.log(asecondNumber, typeof asecondNumber);
+
+abigintNumber = 1234567890123456789012345678901234567890n;
+console.log(abigintNumber, typeof abigintNumber);
+
+abigintNumber =
+  12345678901234567890123456789012345678901234567890123456789012345678901234567890n;
+console.log(abigintNumber, typeof abigintNumber);
+
+abigintNumber =
+  99999999999999999999999999999999999999999999999999999999999999999999999999999999199999999999999999991999999999999999199999999999999n;
+console.log(abigintNumber, typeof abigintNumber);
+abigintNumber = abigintNumber * 9434242342342429999n;
+console.log(abigintNumber, typeof abigintNumber);

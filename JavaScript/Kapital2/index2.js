@@ -5,3 +5,4 @@ function hello(person) {
 let user = "Maurice Schmitz";
 const result = hello(user);
 console.log("Result", result);
+//# sourceMappingURL=index2.js.map
